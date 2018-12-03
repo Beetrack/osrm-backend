@@ -90,7 +90,7 @@ void RequestHandler::HandleRequest(const http::request &current_request, http::r
             BOOST_ASSERT(context_end <= request_string.end());
             std::string context(context_begin, context_end);
 
-            current_reply.status = http::reply::bad_request;
+            current_reply.status = http::reply::ok;
             result = util::json::Object();
             auto &json_result = result.get<util::json::Object>();
             json_result.values["code"] = "InvalidUrl";
