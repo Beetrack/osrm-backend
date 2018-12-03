@@ -1,3 +1,14 @@
+## Beetrack Specific Commands
+
+In order to build the image, run the following commands in Docker Compiler server:
+
+```
+cd docker/
+sudo docker build --build-arg DOCKER_TAG="BEETRACK-debug" -t osrm-beetrack -f Dockerfile ..
+sudo docker tag osrm-beetrack:latest gcr.io/beetrack-gcp/osrm-beetrack:latest
+sudo docker push gcr.io/beetrack-gcp/osrm-beetrack:latest
+```
+
 ## Open Source Routing Machine
 
 | Linux / macOS | Windows | Code Coverage |
